@@ -4,9 +4,14 @@ a = Counter([1, 1 ,1, 3, 4, 4 ,4])
 b = Counter([1, 1, 3, 4])
 print(a)
 print(a - b)
+print(dict(a))
+print(dict(a-b))
 
 for key, value in a.items():
     print(key, value)
+
+
+
 
 
 

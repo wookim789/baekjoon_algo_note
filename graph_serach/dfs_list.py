@@ -23,6 +23,13 @@ graph = [
         [1,7]    # 8 "
     ]
 
+# n = int(input())
+# graph = [[] for _ in range(9)] 
+# for i in range(1, n):
+#     graph[i] = (list(map(int, input().split())))
+# print(graph)
+
+
 # 그래프가 위와 같을 때, dfs 탐색알고리즘으로 탐색순서를 출력하라
 visit = [False for _ in range(9)] 
 print(visit)

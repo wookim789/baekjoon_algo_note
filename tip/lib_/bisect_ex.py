@@ -28,7 +28,6 @@ def count_by_range(a, l_val, r_val):
     r_idx = bisect_right(a, r_val)
 
     return r_idx - l_idx
-
 # 값이 4인 개수 출력
 print(count_by_range(arr, 4, 4))
 
