@@ -38,7 +38,6 @@ def dfs(matrix, dn, dm):
             return True
     else:
         return False
-
 count = 0
 for i in range(n):
     for j in range(m):
