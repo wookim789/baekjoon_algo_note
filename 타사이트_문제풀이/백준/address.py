@@ -1,21 +1,21 @@
 # 단지번호붙이기 2667
 
 # dfs로 모든 단지 순회
-# n = 7
-# map_tot = [[0,1,1,0,1,0,0],
-#             [0,1,1,0,1,0,1],
-#             [1,1,1,0,1,0,1],
-#             [0,0,0,0,1,1,1],
-#             [0,1,0,0,0,0,0],
-#             [0,1,1,1,1,1,0],
-#             [0,1,1,1,0,0,0]]
+n = 7
+map_tot = [[0,1,1,0,1,0,0],
+            [0,1,1,0,1,0,1],
+            [1,1,1,0,1,0,1],
+            [0,0,0,0,1,1,1],
+            [0,1,0,0,0,0,0],
+            [0,1,1,1,1,1,0],
+            [0,1,1,1,0,0,0]]
 # print(map_tot)
 
 
-n = int(input())
-map_tot = []
-for i in range(n):
-    map_tot.append(list(map(int, input())))
+# n = int(input())
+# map_tot = []
+# for i in range(n):
+#     map_tot.append(list(map(int, input())))
 
 visited = [[False] * n for _ in range(n)]
 result = []
