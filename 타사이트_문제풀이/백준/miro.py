@@ -16,14 +16,14 @@
 # n,m = 2, 25
 # arr_map = [[1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1],
 #            [1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1]]
-n,m =7, 7
-arr_map =  [[1,0,1,1,1,1,1],
-            [1,1,1,0,0,0,1],
-            [1,0,0,0,0,0,1],
-            [1,0,0,0,0,0,1],
-            [1,0,0,0,0,0,1],
-            [1,0,0,0,0,0,1],
-            [1,1,1,1,1,1,1]]
+# n,m =7, 7
+# arr_map =  [[1,0,1,1,1,1,1],
+#             [1,1,1,0,0,0,1],
+#             [1,0,0,0,0,0,1],
+#             [1,0,0,0,0,0,1],
+#             [1,0,0,0,0,0,1],
+#             [1,0,0,0,0,0,1],
+#             [1,1,1,1,1,1,1]]
 
 # n,m =5, 5
 # arr_map =  [[1,0,1,1,1],
@@ -34,44 +34,44 @@ arr_map =  [[1,0,1,1,1,1,1],
 
 
 
-# arr_map = []
-# n, m = map(int, input().split())
-# for x in range(n):
-#     data = input()
-#     temp = list()
-#     for y in data:
-#         temp.append(int(y))
-#     arr_map.append(temp)
-
+arr_map = []
+n, m = map(int, input().split())
+for x in range(n):
+    data = input()
+    temp = list()
+    for y in data:
+        temp.append(int(y))
+    arr_map.append(temp)
 
 from collections import deque
 
 que = deque()
 
-count = 0
-que.append(tuple([0, 0]))
+que.append(tuple([0, 0, 0]))
 while que:
     codi = que.popleft()
 
     dy = codi[0]
     dx = codi[1]
+    temp = codi[2]
 
     if dy == n-1 and dx == m-1:
-        print(count)
+        temp += 1
+        print(temp)
         break
 
     if arr_map[dy][dx] == 1:
         arr_map[dy][dx] = 0
-        count += 1
+        temp += 1
 
         if dx < m - 1:
-            que.append(tuple([dy, dx + 1]))
+            que.append(tuple([dy, dx + 1, temp]))
         if dy < n - 1:
-            que.append(tuple([dy + 1, dx]))
+            que.append(tuple([dy + 1, dx, temp]))
         if dx > 0:
-            que.append(tuple([dy, dx - 1]))
+            que.append(tuple([dy, dx - 1, temp]))
         if dy > 0 :
-            que.append(tuple([dy - 1, dx]))
+            que.append(tuple([dy - 1, dx, temp]))
 
 
 
