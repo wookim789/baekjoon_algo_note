@@ -54,8 +54,8 @@ for k in range(1, n + 1):
 
     
 # 수행된 결과를 출력
-for a in range(1, n + 1):
-    for b in range(1, n + 1):
+for a in range(0, n + 1):
+    for b in range(0, n + 1):
         # 도달할 수 없는 경우 무한으로 출력
         if graph[a][b] == INF:
             print("INFINITY", end =' ')

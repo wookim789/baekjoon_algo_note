@@ -23,7 +23,7 @@ end = 9
 
 # 재귀함수로 작성 가능
 
-target = 8
+target = 9
 arr = [x for x in range(1,20,2)]
 print(arr)
 

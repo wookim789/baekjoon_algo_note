@@ -10,7 +10,7 @@ count = 0
 for idx in range(n-1, 0, -1):
     if k == 0:
         break
-    if k >= coins[idx]:
+    if k > coins[idx]:
         m, k = map(int, divmod(k, coins[idx]))
         count += m
 print(count)
