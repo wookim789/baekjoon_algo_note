@@ -63,3 +63,6 @@ for lang in lang_list :
         b_f[bf] = j_s
     l_g[lang] = b_f
 print(l_g)
+
+
+l_g[q_arr[0]][q_arr[1]][q_arr[2]][q_arr[3]]
