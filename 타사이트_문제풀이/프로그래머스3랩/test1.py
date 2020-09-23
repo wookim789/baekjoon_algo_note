@@ -8,7 +8,7 @@ def solution(routes):
         ma = max(ma, max(i))
     
     highway = {}
-    for i in range(mi, ma):
+    for i in range(mi, ma ):
         highway[i] = 0
 
     for i in routes:

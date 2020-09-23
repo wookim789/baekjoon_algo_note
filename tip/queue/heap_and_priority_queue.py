@@ -20,3 +20,11 @@ for i in range(len(heap)):
 
 # pop 후엔 삭제되니 유의
 print('heap',heap)
+print()
+arr = []
+arr1 = [1]
+if arr :
+    print(0)
+if arr1:
+
+    print(1)
