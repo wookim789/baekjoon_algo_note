@@ -29,7 +29,6 @@ for r in range(y - 7):
                     elif c_idx !=0 and ches_map[r_idx][c_idx] == ches_map[r_idx][c_idx - 1]:
                         ches_map[r_idx][c_idx] = change_color[ches_map[r_idx][c_idx]]
                         cnt += 1
-            print(cnt)
             result = min(result, cnt)
             ches_map = temp_map
 print(result)
