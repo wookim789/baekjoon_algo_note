@@ -2,14 +2,13 @@ from collections import Counter
 
 a = Counter([1, 1 ,1, 3, 4, 4 ,4])
 b = Counter([1, 1, 3, 4])
-# print(a)
-# print(a - b)
-# print(dict(a))
-# print(dict(a-b))
+print(a)
+print(a - b)
+print(dict(a))
+print(dict(a-b))
 
 for key, value in a.items():
-    pass
-    # print(key, value)
+    print(key, value)
 
 
 
@@ -24,8 +23,8 @@ d["b"] = 1
 # print(d)
 
 for key, value in d.items():
-    pass
-    # print(key, value)
+    # pass
+    print(key, value)
 
 od = OrderedDict()
 od["c"] = 1
@@ -34,8 +33,8 @@ od["b"] = 1
 # print(od)
 
 for key, value in od.items():
-    pass
-    # print(key, value)
+    # pass
+    print(key, value)
 
 
 
