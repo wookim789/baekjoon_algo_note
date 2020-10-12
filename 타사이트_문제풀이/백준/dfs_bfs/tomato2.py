@@ -69,37 +69,6 @@ for h_idx in range(h):
 bfs()
 print(print_max_date())
 
-# for tmt_2d in tmt_3d:
-#     for row in tmt_2d:
-#         print(row)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # def search_tomato_2d(h):
 #     global m, n, tomato_3d
 #     tomato_2d = tomato_3d[h]
