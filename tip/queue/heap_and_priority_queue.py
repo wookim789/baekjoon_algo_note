@@ -10,6 +10,10 @@ heapq.heappush(heap, (6, 2))
 heapq.heappush(heap, (7, 1))
 heapq.heappush(heap, (9, 8))
 heapq.heappush(heap, (2, 9))
+heapq.heappush(heap, (2, 1))
+heapq.heappush(heap, (2, 3))
+heapq.heappush(heap, (2, 0))
+heapq.heappush(heap, (2, 9))
 
 # 원소로 튜플을 넣었다면 리스트를 출려해도 정렬되진 않고
 print(heap)
