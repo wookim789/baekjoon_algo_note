@@ -1,6 +1,6 @@
 import sys
 
-limit = 10
+limit = 100
 
 arr = []
 for i in range(limit):
