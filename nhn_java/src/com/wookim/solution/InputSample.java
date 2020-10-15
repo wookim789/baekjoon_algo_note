@@ -1,12 +1,10 @@
-package com.wookim.solution;
+package src.com.wookim.solution;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class InputSample {
-    public void InputSampleMethod() throws IOException {
+    public static void InputSampleMethod() throws IOException {
 
         // scanner에서 next, nextInt 등을 사용하면
         // 공백 이후로 데이터를 받고 종료된 후에
@@ -25,8 +23,7 @@ public class InputSample {
         // 1 2
         int i1 = sc.nextInt();
         int i2 = sc.nextInt();
-        // 버퍼 초기화
-        sc.nextLine();
+        sc.nextLine(); // 버퍼 초기화
         System.out.println(i1 + i2);
 
         // 문자열에서 공백으로 구분하여 받기
@@ -37,9 +34,9 @@ public class InputSample {
         // 문자열에서 공백으로 구분하여 숫자 받기
         System.out.println("숫자 입력 입력");
         int n = sc.nextInt();
+        sc.nextLine();
         System.out.println(n);
         // 버퍼 초기화
-        sc.nextLine();
 
         System.out.println("공백 구분된 숫자 입력");
         String [] iStrArr = sc.nextLine().split(" ");

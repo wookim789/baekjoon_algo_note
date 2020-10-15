@@ -1,6 +1,6 @@
-package com.wookim;
+package src.com.wookim;
 
-import com.wookim.solution.InputSample;
+import src.com.wookim.solution.InputSample;
 
 import java.io.IOException;
 
