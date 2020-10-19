@@ -31,7 +31,7 @@ public class BreakWallAndMove {
     private static int bfs(){
         Queue<Integer[]> nextQue = new LinkedList<>();
         nextQue.add(new Integer[]{0, 0, 0, 1}); //[0]x, [1]y,  [2]0: 안부셨음, 1: 부셨음
-        bollean [][][] hasBeen = new bollean[2][n][m];
+//        bollean [][][] hasBeen = new bollean[2][n][m];
 
         while(!nextQue.isEmpty()){
             Integer[] curPoint = nextQue.poll();
@@ -41,7 +41,7 @@ public class BreakWallAndMove {
             int isBreak = curPoint[2];
             int result = curPoint[3];
             String point = Integer.toString(row) + "." + Integer.toString(col);
-            hasBeen.put(point, "1");
+//            hasBeen.put(point, "1");
             System.out.println(point);
             if(row == n-1 && col == m-1){
                 return result;
@@ -54,16 +54,16 @@ public class BreakWallAndMove {
                 int nextRow = row + dx[dir];
                 int nextCol = col + dy[dir];
                 String nextPoint = Integer.toString(nextRow) + "." + Integer.toString(nextCol);
-                if(0 <= nextRow && nextRow < n && 0 <= nextCol && nextCol < m && !hasBeen.containsKey(nextPoint)){
-                    if(map[nextRow][nextCol] == 0){
-                        nextQue.add(new Integer[]{nextRow, nextCol, isBreak, result + 1});
-                        hasBeen.put(nextPoint, "1");
-                    }else if(isBreak == 0){
-                        isBreak = 1;
-                        nextQue.add(new Integer[]{nextRow, nextCol, isBreak, result + 1});
-                        hasBeen.put(nextPoint, "1");
-                    }
-                }
+//                if(0 <= nextRow && nextRow < n && 0 <= nextCol && nextCol < m && !hasBeen.containsKey(nextPoint)){
+//                    if(map[nextRow][nextCol] == 0){
+//                        nextQue.add(new Integer[]{nextRow, nextCol, isBreak, result + 1});
+////                        hasBeen.put(nextPoint, "1");
+//                    }else if(isBreak == 0){
+//                        isBreak = 1;
+//                        nextQue.add(new Integer[]{nextRow, nextCol, isBreak, result + 1});
+////                        hasBeen.put(nextPoint, "1");
+//                    }
+//                }
             }
         }
         return -1;
