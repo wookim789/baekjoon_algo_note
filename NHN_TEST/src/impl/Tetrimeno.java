@@ -1,7 +1,7 @@
 package impl;
 import java.util.*;
-//public class Tetrimeno {
-class Main{
+public class Tetrimeno {
+//class Main{
     private static int [][] map;
     private static int n, m, tot;
     private static int[] dx = {1, 0, -1, 0};

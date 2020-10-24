@@ -22,4 +22,3 @@ public class MultiOrSum {
         System.out.println(result);
     }
 }
-
