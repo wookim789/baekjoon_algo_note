@@ -40,7 +40,6 @@ class Solution(object):
         else:
             val = 0
         
-        
         new_list = ListNode(add, self.set_list_node(l1_n, l2_n, val))
         return new_list
         
