@@ -5,18 +5,12 @@
 # 행 (왼쪽 오른쪽) 밀리는 칸수
 
 n = int(input())
-matr = []
-for i in range(n):
-    matr.append(list(map(int, input().split())))
+matr = [list(map(int, input().split())) for _ in range(n)]
 
 m = int(input())
-order = []
-for i in range(m):
-    order.append(list(map(int, input().split())))
-
 # 회전명령 수행 -> 매트릭스 변경
 for i in range(m):
-    ridx, dirt, num = order[i][0] - 1, order[i][1], order[i][2]
+    ridx, dirt, num = map(int, input().split())
 
     row = matr[ridx]
     tmp = [0] * n
@@ -37,9 +31,7 @@ eidx = n - 1
 result = 0
 for i in range(n):
     
-    if sidx < eidx - 1:
-        result += sum(matr[i][sidx:eidx+1])
-    elif sidx == eidx:
+    if sidx <= eidx - 1:
         result += sum(matr[i][sidx:eidx+1])
     else:
         result += sum(matr[i][eidx:sidx+1])

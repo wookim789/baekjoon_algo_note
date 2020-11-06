@@ -2,18 +2,14 @@
 
 n = int(input())
 
-matr = []
-for i in range(n):
-    matr.append(list(map(int, input().split())))
+matr = [list(map(int, input().split())) for _ in range(n)]
 
-
-center = int(n / 2)
-
-sidx, eidx = 0, 1
+center = n // 2
+sidx = eidx = center
 
 result = 0
 for i in range(n):
-    result += sum(matr[i][center + sidx : center + eidx])
+    result += sum(matr[i][sidx : eidx + 1])
     if i < center: # 전반
         sidx -= 1
         eidx += 1
