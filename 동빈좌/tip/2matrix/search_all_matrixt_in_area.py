@@ -13,10 +13,10 @@ for r in range(y):
     m.append(list(input()))
 
 cnt = 0
-for r_idx in range(y - 7):
-    for c_idx in range(x - 7):
-        for r in range(r_idx, r_idx + 8):
-            for c in range(c_idx, c_idx + 8):
+for r_idx in range(y - 6):
+    for c_idx in range(x - 6):
+        for r in range(r_idx, r_idx + 4):
+            for c in range(c_idx, c_idx + 4):
                 print(m[r][c], end='')
             print()
         cnt += 1

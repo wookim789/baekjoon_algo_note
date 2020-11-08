@@ -19,7 +19,7 @@ ches_map = []
 
 for r_idx in range(y - 7):
     for c_idx in range(x - 8):
-        ches_map = [row[c_idx : c_idx + 8] for row in map_arr[r_idx : r_idx+ 8]]
+        ches_map = [row[c_idx : c_idx + 4] for row in map_arr[r_idx : r_idx+ 3]]
         for c in ches_map:
             print(c)
         print()
