@@ -1,9 +1,6 @@
 # 주사위 게임
 n = int(input())
-arr = []
-
-for i in range(n):
-    arr.append(list(map(int, input().split())))
+arr = [list(map(int, input().split())) for _ in range(n)]
 
 result = []
 for r in arr:
