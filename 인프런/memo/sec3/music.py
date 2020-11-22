@@ -19,7 +19,7 @@ st, ed = 0, answer
 while st <= ed:
     # print(st, ed)
     mid = (st + ed) // 2
-    # m을 넘어서면 실패
+    # m을 넘어서면 실패다
     m_cnt = 1
     tmp_sum = 0
 
