@@ -24,3 +24,12 @@ for i in range(n):
     cnt += 1
 
 print(cnt)
+
+
+from collections import deque
+
+dq = deque()
+dq.append(1)
+dq.appendleft(1)
+dq.pop()
+dq.popleft()

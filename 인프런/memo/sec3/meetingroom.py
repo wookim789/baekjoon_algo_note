@@ -11,10 +11,10 @@ sch.sort(key = lambda x : x[1])
 ed = 0
 cnt = 0
 
-for tp in sch:
-    if ed <= tp[0]:
+for s, e in sch:
+    if ed <= s:
         cnt += 1
-        ed = tp[1]
+        ed = e
 
 print(cnt)
 

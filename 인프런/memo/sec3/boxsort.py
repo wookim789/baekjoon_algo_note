@@ -6,15 +6,11 @@ box_cnt = list(map(int, input().split()))
 
 m = int(input())
 
+box_cnt.sort()
 
 for _ in range(m):
-    mx = max(box_cnt)
-    mx_idx = box_cnt.index(mx)
+    box_cnt[0] += 1
+    box_cnt[-1] -= 1
+    box_cnt.sort()
 
-    mi = min(box_cnt)
-    mi_idx = box_cnt.index(mi)
-
-    box_cnt[mx_idx] -= 1
-    box_cnt[mi_idx] += 1
-
-print(max(box_cnt) - min(box_cnt))
+print(box_cnt[-1] - box_cnt[0])
