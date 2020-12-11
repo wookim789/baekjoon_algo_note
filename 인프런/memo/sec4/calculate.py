@@ -11,28 +11,48 @@ stack = [] # 후 순위 연산
 oper = ''  # 선 순위 연산
 #  + - * / ( )
 
-print(res)
-
-
 # 재귀 함수
 def set_equation_recur(eq):
-    low_op = ''
-    hig_op = ''
-    stack = ''
-
-    open = 0
-    for i in range(len(eq)):
-        s = eq[i]
-        if s.isdigit() and not hig_op:
-            stack += s
-        elif s.isdigit() and hig_op:
-            stack += s
-            stack += hig_op
-            hig_op = ''
-        elif s == '+' or s == '-':
-            low_op += s
-        elif s == '*' or s == '/':
-            hig_op = s
+    res = ''
+    row_oper = ''
+    hig_oper = ''
+    st = []
+    i = 0
+    # 문자열 연결
+    while True:
+        if i >= len(eq):
+            res += hig_oper
+            break
+        if eq[i].isdigit():
+            res += eq[i]
+            res += hig_oper
+            hig_oper = ''
+        elif eq[i] == '+' or eq[i] == '-':
+            row_oper += eq[i]
+        elif eq[i] == '*' or eq[i] == '/':
+            hig_oper = eq[i]
         else: # 재귀 호출
-            
+            recur = ''
+            j = i
+            while True:
+                if eq[j] == '(':
+                    st.append(eq[j])
+                elif eq[j] == ')':
+                    st.pop()
+                
+                if not len(st) > 0:
+                    break
+                recur += eq[j]
+                j += 1
+            recur = recur[1:]
+            print(recur)
+            res += set_equation_recur(recur)
+            i = j
+        i += 1
+    res += row_oper
+    return res
 
+print(set_equation_recur(s))
+
+    # 연산자 처리
+    # 재귀 호출
